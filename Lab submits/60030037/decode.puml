@@ -1,0 +1,11 @@
+@startuml 
+
+[*] -> Ready
+Ready : do/waiting for  instruction
+Ready -> Decode : Received encoded data
+Decode : do/decoding encoded data
+Decode --> Display : Decoded
+Display : do/show decoded data
+Display -left-> [*]
+
+@enduml

@@ -1,0 +1,11 @@
+@startuml 
+
+[*] -> Ready
+Ready : do/waiting for  instruction
+Ready -> SelectPlace : Save instruction called
+SelectPlace : do/wait for user select place where he,she want to save to
+SelectPlace --> StoreData : Selected save place
+StoreData : do/write file,data to HDD,SSD
+StoreData -left-> [*]
+
+@enduml

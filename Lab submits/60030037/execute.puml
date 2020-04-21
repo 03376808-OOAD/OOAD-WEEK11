@@ -1,0 +1,11 @@
+@startuml 
+
+[*] -> Ready
+Ready : do/waiting for  instruction
+Ready -> Execute : Called instruction
+Execute : do/executing instruction
+Execute --> Display : Executed
+Display : do/wait for user command
+Display -left-> [*]
+
+@enduml
