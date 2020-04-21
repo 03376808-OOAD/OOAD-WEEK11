@@ -1,0 +1,11 @@
+@startuml 
+
+state "Read Instruction" as readInstruction
+
+[*] -> Ready
+Ready : do/waiting for  instruction
+Ready -> readInstruction : Asked to read instruction
+readInstruction : do/show all instruction
+readInstruction --> [*]
+
+@enduml
