@@ -1,0 +1,11 @@
+@startuml 
+
+[*] -> Ready
+Ready : do/waiting for  instruction
+Ready -> TurnOff : TurnOff Button Pressed
+TurnOff : do/save all files and shutdown
+TurnOff --> Shutdown : Turned Off
+Shutdown : do/shut down the power
+Shutdown -left-> [*]
+
+@enduml
