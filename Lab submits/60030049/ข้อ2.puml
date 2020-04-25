@@ -1,0 +1,15 @@
+@startuml Decode
+skinparam state {
+    StartColor Red
+    BackgroundColor Peru
+    BorderColor Black
+    FontName Impact
+}
+[*] -right-> Ready
+Ready : รอคำสั่ง
+Ready-right->Decoding
+Decoding:กำลังถอดรหัสคำสั่ง
+Decoding-up->Decoding:Decoding not \nComplete
+Decoding-up->Ready:Decoding Complete
+
+@enduml

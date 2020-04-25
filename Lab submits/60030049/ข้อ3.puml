@@ -1,0 +1,19 @@
+@startuml Excute
+skinparam state {
+    StartColor Red
+    BackgroundColor Peru
+    BorderColor Black
+    FontName Impact
+}
+[*] -right-> Ready
+Ready : รอคำสั่ง
+Ready-right->Executing
+Executing:do/executing \ninstructions
+Executing-left->Executing:Executing not \nComplete
+Executing-->Buffering:I/O Instruction Executed
+Buffering:do/keep output in \nmemory
+Buffering-->output:Buffering Complete
+output:do/outputting the result
+output-up->Ready:Output Complete
+
+@enduml

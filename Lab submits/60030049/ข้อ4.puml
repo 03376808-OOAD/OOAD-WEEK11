@@ -1,0 +1,14 @@
+@startuml Store Data
+skinparam state {
+    StartColor Red
+    BackgroundColor Peru
+    BorderColor Black
+    FontName Impact
+}
+[*] -right-> Ready
+Ready : รอคำสั่ง
+Ready-down->StoringData
+StoringData:do/storing data to \nmemory
+StoringData-up->StoringData:Storing Data not Complete
+StoringData-left->Ready:Storing data \nComplete
+@enduml
