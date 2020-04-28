@@ -1,0 +1,18 @@
+@startuml store Data
+skinparam BackgroundColor navajowhite
+skinparam Shadowing false
+skinparam state{
+    BackgroundColor tan
+    BorderColor ghostwhite
+}
+[*] --> Ready
+Ready : รอคำสั่ง
+Ready --> Selectstore
+Selectstore : เลือกที่เก็บข้อมูล
+Selectstore--> Storedata
+Storedata : เก็บข้อมูลที่ต้องการ
+Storedata -right-> Ready : กลับไปทำงานใหม่
+Ready -->[*] 
+
+
+@enduml
