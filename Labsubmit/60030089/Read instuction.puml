@@ -1,0 +1,16 @@
+@startuml read instruction
+skinparam BackgroundColor 	salmon
+skinparam Shadowing false
+skinparam state{
+    BackgroundColor lightyellow
+    BorderColor darkturquoise
+}
+skinparam ArrowColor snow
+[*] --> Ready
+Ready : รอคำสั่ง
+Ready --> Reading
+Reading : อ่านคำสั่งเมื่อมีคำสั่งถูกป้อนเข้ามา
+Reading --> doing
+doing : ทำงานตามคำสั่งที่ถูกป้อนเข้ามา
+doing --> [*]
+@enduml

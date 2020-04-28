@@ -1,0 +1,16 @@
+@startuml Shutdown
+skinparam BackgroundColor lightGreen
+skinparam Shadowing false
+skinparam state{
+    BackgroundColor lightblue
+    BorderColor darkturquoise
+}
+[*] --> Ready
+Ready : รอคำสั่ง
+Ready --> Turnoff : กดปิดเครื่อง
+Turnoff : เซฟข้อมูลในโปรแกรมที่ยังไม่ถูกปิด
+Turnoff --> Shutdown : เมื่อบันทึกเสร็จ 
+Shutdown : ปิดการทำงานของคอมพิวเตอร์
+Shutdown --> [*]
+
+@enduml

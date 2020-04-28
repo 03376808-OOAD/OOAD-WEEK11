@@ -1,0 +1,16 @@
+@startuml Excute
+skinparam BackgroundColor lavender
+skinparam Shadowing false
+skinparam state{
+    BackgroundColor linen
+    BorderColor dimgray
+}
+[*] --> Ready
+Ready : รอคำสั่ง
+Ready --> Excute
+Excute : ทำตามคำสั่ง
+Excute --> mornitor 
+mornitor : แสดงผลที่ทำตามคำสั่ง
+mornitor -right-> Ready : เมื่อทำตามขั้นตอนเสร็จแล้วก็วนกลับไปรอคำสั่งใหม่
+Ready --> [*] : จบการทำงาน
+@enduml

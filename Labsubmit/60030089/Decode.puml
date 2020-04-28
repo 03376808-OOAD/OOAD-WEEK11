@@ -1,0 +1,17 @@
+@startuml Decode
+skinparam BackgroundColor 	lawngreen
+skinparam Shadowing false
+skinparam state{
+    BackgroundColor lightgray
+    BorderColor 	navy
+}
+skinparam ArrowColor darkslategray
+[*] --> Ready
+Ready : รอคำสั่ง
+Ready --> Decode
+Decode : ถอดรหัสคำสั่ง
+Decode --> mornitor
+mornitor : แสดงผลรหัสที่ถอดแล้วผ่านหน้าจอ
+mornitor -right-> Ready :วนกลับไปรอคำสั่งใหม่
+Ready --> [*] : จบการทำงาน
+@enduml
