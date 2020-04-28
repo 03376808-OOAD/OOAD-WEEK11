@@ -1,0 +1,18 @@
+@startuml Read Instruction
+skinparam state {
+    StartColor Red
+    BackgroundColor Peru
+    BorderColor Black
+    FontName Impact
+}
+[*] -right-> Ready
+Ready : รอคำสั่ง
+Ready-right->Reading:Instrunction \nComing
+Reading:อ่านคำสั่ง\nจากหน่วยความจำ
+Reading-up->Reading:Reading not Complete
+Reading-->Sending:Reading Complete
+Sending:ส่งคำสั่งไปที่ CPU
+Sending->Sending:Sending not Complete
+Sending-left->Ready:Sending \nComplete
+
+@enduml

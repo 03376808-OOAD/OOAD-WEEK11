@@ -1,0 +1,14 @@
+@startuml shut down
+skinparam state {
+    StartColor Red
+    EndColor Red
+    BackgroundColor Peru
+    BorderColor Black
+    FontName Impact
+}
+[*] -right-> Ready
+Ready : รอคำสั่ง
+Ready-down->Off:Switch is \nturned off
+Off:ปิดเครื่อง \n(shut down the power)
+Off-->[*]
+@enduml
