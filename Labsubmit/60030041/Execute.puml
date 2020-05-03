@@ -1,0 +1,13 @@
+@startuml
+skinparam Shadowing false
+skinparam state{
+    BackgroundColor pink 
+}
+[*]-> Ready
+Ready:do/waiting for instruction
+Ready->Execute:Called instruction
+Execute:executing instruction
+Execute-->Display:Executed
+Display:wait for user command
+Display -left-> [*]
+@enduml

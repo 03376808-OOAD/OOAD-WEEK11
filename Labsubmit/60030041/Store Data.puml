@@ -1,0 +1,9 @@
+@startuml Store
+[*] -> Ready
+Ready:do/waiting for  instruction
+Ready->SelectPlace:Save instruction
+SelectPlace:do/Waiting to select a Select Place
+StoreData:do/write file,data 
+SelectPlace-->StoreData:Selected save place
+StoreData -left->[*]
+@enduml
