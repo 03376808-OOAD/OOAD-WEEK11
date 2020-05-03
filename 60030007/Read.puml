@@ -1,0 +1,15 @@
+@startuml Read
+skinparam Shadowing false
+skinparam state{
+    BackgroundColor LightPink
+    BorderColor Brown
+}
+[*] -> Ready
+Ready : waiting instruction
+Ready -> Reading
+Reading : reading instruction
+Reading -> Running
+Running : Running Program
+Running -> [*] : end
+
+@enduml
