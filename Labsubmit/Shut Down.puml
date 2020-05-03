@@ -1,0 +1,11 @@
+@startuml shut
+skinparam Shadowing false
+skinparam state{
+    BackgroundColor pink 
+}
+[*] -> Ready
+Ready : do/waiting for instructions
+Off: do/shut down the power
+Ready->Off:Turn off button
+Off-->[*]
+@enduml
