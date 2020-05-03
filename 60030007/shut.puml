@@ -1,0 +1,15 @@
+@startuml shut
+skinparam Shadowing false
+skinparam state{
+    BackgroundColor LightPink
+    BorderColor Brown
+}
+[*] -> Ready
+Ready : Waiting Instruction
+Ready -> TurnOff : push your TurnOff button
+TurnOff : save all files and shutdown
+TurnOff --> Shutdown : Turned Off
+Shutdown : TurnOffComputer
+Shutdown --> [*] : end
+
+@enduml

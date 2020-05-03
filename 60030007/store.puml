@@ -1,0 +1,14 @@
+@startuml store
+skinparam Shadowing false
+skinparam state{
+    BackgroundColor LightPink
+    BorderColor Brown
+}
+[*] -> Ready
+Ready : waiting instruction
+Ready -> SelectPlace : Select your place
+SelectPlace : saving data
+SelectPlace --> StoreData : save in your place
+StoreData : saved Data
+StoreData --> [*] : end
+@enduml

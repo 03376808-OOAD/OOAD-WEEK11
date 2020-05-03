@@ -1,0 +1,14 @@
+@startuml Decode
+skinparam Shadowing false
+skinparam state{
+    BackgroundColor LightPink
+    BorderColor Brown
+}
+[*] -> Ready
+Ready : waiting instruction
+Ready -> Decode 
+Decode : decoding 
+Decode -> Display : Decoded
+Display : show decoded
+Display --> [*] : end
+@enduml
