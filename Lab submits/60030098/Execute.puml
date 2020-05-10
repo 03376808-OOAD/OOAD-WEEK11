@@ -1,2 +1,12 @@
 @startuml
+
+RAM : do/Memories data
+CPU : do/Computing data
+Output : do/Display to User
+
+[*] -> RAM 
+RAM -down-> CPU : Send decoded data
+CPU -left-> Output : Send to Output
+Output -left-> [*]
+
 @enduml
