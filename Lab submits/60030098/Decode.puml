@@ -1,0 +1,16 @@
+@startuml
+
+hide empty description
+RAM : do/Memories data
+
+[*] -> RAM
+RAM -down-> CPU : Send data
+CPU -> RAM 
+RAM -up-> [*]
+
+state CPU{
+    [*] -> ControlUnit : receive data
+    ControlUnit -down-> ALU : Send to computing
+    ALU -left-> [*] : Send to outside
+}
+@enduml

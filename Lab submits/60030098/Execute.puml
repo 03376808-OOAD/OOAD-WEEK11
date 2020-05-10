@@ -3,10 +3,12 @@
 RAM : do/Memories data
 CPU : do/Computing data
 Output : do/Display to User
+ROM : do/Memories data for next times
 
-[*] -> RAM 
-RAM -down-> CPU : Send decoded data
-CPU -left-> Output : Send to Output
+[*] -> CPU 
+CPU -down-> RAM : Send decoded data
+RAM -left-> Output : Send to Output
+RAM -down-> ROM : Memoring data
 Output -left-> [*]
-
+ROM ->[*]
 @enduml
