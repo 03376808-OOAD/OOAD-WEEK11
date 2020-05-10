@@ -1,0 +1,12 @@
+@startuml Execute
+
+[*]->Ready
+Ready:รอคำสั่ง
+Ready->Executing
+Executing:ทำตามคำสั่ง
+Executing->Executing:ทำคำสั่งไม่สำเร็จ
+Executing-down->Output:ทำตามคำสั่ง
+Output:ผลลัพธ์การทำตามคำสั่ง
+Output->Ready:รอคำสั่งใหม่
+
+@enduml
