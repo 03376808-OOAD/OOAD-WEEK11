@@ -1,0 +1,13 @@
+@startuml
+
+Ready:do/wait for instructions
+Shutdown:do/shutdown computer system
+On:do/turn off the power switch
+Off:do/shutdown the power
+
+[*] -> Ready
+Ready -> Shutdown : Use shutdown command
+Shutdown -down-> On : Computer shutting down 
+On -left-> Off : Switch is turned off
+Off -left-> [*]
+@enduml

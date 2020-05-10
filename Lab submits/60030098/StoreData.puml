@@ -1,0 +1,9 @@
+@startuml
+
+RAM : do/Memories data
+ROM : do/Memories data for next times
+
+[*] -> RAM
+RAM -down-> ROM : Send data
+ROM -left-> [*]
+@enduml
