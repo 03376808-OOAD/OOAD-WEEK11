@@ -1,0 +1,12 @@
+@startuml
+
+Input : do/Input data
+ReadInstructions : do/Read data from input
+RAM : do/Memories data
+
+[*] -> Input 
+Input -> ReadInstructions : input somethings
+ReadInstructions -down-> RAM : send data
+RAM -left-> [*]
+
+@enduml
