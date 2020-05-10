@@ -1,0 +1,11 @@
+@startuml Shutdown
+
+[*] -> Ready
+Ready : รอคำสั่ง
+Ready -> TurnOff : กดปุ่มปิด
+TurnOff : ดำเนินการปิด
+TurnOff -down-> Shutdown 
+Shutdown : ปิดเครื่อง
+Shutdown -> [*]
+
+@enduml

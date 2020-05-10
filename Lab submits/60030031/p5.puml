@@ -1,0 +1,12 @@
+@startuml StoreData
+
+[*]->Ready
+Ready:รอคำสั่ง
+Ready->StoreLocation:เลือกที่เก็บ
+StoreLocation:ที่เก็บข้อมูล
+StoreLocation-down->StoringData:ทำการเก็บข้อมูล
+StoringData:เก็บข้อมูล
+StoringData->StoringData:เก็บข้อมูลไม่สำเร็จ
+StoringData-left->[*]
+
+@enduml

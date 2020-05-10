@@ -1,0 +1,12 @@
+@startuml ReadInstruction
+
+[*]->Ready
+Ready:รอคำสั่ง
+Ready->Reading:คำสั่งกำลังส่ง
+Reading:อ่านคำสั่ง
+Reading->Reading:การอ่านคำสั่งไม่สำเร็จ
+Reading-down->doing:ส่งคำสั่งไปที่ CPU
+doing:ทำตามคำสั่ง
+doing->Ready:รอคำสั่งใหม่
+
+@enduml

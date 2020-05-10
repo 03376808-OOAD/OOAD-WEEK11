@@ -1,0 +1,12 @@
+@startuml Decode
+
+[*]->Ready
+Ready:รอคำสั่ง
+Ready->Decoding
+Decoding:กำลังถอดรหัสคำสั่ง
+Decoding->Decoding:การถอดรหัสไม่สำเร็จ
+Decoding-down->Show:ถอดรหัสสำเร็จ
+Show:แสดงผล
+Show->Ready:รอคำสั่งใหม่
+
+@enduml
