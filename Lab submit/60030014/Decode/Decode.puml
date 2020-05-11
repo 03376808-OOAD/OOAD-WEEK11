@@ -1,0 +1,14 @@
+@startuml Decode
+skinparam Shadowing false
+skinparam state{
+BackgroundColor  Yellow
+
+}
+[*]-> Ready 
+Ready:do/waiting for  instruction
+Decode : decoding
+Display : show decoded data
+Ready-> Decode:Received encoded data
+Decode --> Display : Decoded
+Display -left-> [*] : end
+@enduml

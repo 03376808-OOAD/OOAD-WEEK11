@@ -1,0 +1,14 @@
+@startuml execute
+skinparam Shadowing false
+skinparam state{
+BackgroundColor Yellow
+BorderColor black
+}
+[*] -> Ready
+Ready : waiting instruction
+Ready -> Execute : Calling instruction
+Execute : executing instruction
+Execute --> Display : Executed
+Display : show executed 
+Display --> [*] : end
+@enduml
